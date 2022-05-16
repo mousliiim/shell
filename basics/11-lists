@@ -1,2 +1,3 @@
 #!/bin/bash
-ls --all -l --recursive
+ls --all -l
+ls -all -l ../
