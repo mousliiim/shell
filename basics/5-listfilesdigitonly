@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a -n & *[[:digit:]]*
+ls -a -n
