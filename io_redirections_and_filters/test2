@@ -1,0 +1,10 @@
+9958459
+syslogFacility AUTHPRIV
+AuthorizedKeysFile  .ssh/authorized_keys
+UsePrivilegeSeparation sandbox # Default for new installations.
+AcceptEnv LANG LC_*
+Subsystem   sftp    /usr/libexec/sftp-server
+838593950
+943958835
+9539402042
+03593295
