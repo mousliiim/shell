@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 -r $( find . -type f -print )
+find . -type f -print | head -n 10 | sort -k1.1n
