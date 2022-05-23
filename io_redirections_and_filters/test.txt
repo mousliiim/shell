@@ -1,0 +1,7 @@
+bin salut
+test bin
+bin possible
+oui je vais bien
+bin toto
+bin soso
+sa marche ou pas
