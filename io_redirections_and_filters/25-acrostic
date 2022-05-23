@@ -1,2 +1,2 @@
 #!/bin/bash
-find ..
+cat toto | cut -c1-1 | tr -d '[:space:]'
