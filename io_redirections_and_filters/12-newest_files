@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -print | head -n 10 | sort -k1.1n
+ls -Art | tail -n 10
