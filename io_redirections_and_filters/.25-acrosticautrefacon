@@ -1,0 +1,4 @@
+#!/bin/bash
+cut -c1-1 | tr -d [:space:]
+
+# A COMPLETER CAR PAS DE SAUT A LA LIGNE TROUVER SOLUTION
