@@ -1,0 +1,2 @@
+#!/bin/bash
+let "a=$TRUEKNOWLEDGE + 128" | echo $a
