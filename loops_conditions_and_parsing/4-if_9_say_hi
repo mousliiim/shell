@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# While Loop 10 Times ( Every one time loop my script print a string with "Best School" )
+i=0
+
+while [ $i -lt 10 ]
+do
+    echo "Best School"
+  ((i++))
+  if [[ "$i" == '9' ]]; then
+    echo "Hi"
+  break
+  fi
+done
+echo "Best School"
