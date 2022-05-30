@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# While Loop 10 Times
+nbrhour=1
+nbr=1
+echo "Hour: 0"
+while ((nbrhour < 13))
+do
+        echo $nbr
+        ((nbr++))
+case $nbr in
+ 60)
+ nbr=1
+ echo "Hour: $nbrhour"
+ ((nbrhour++))
+ ;;
+esac
+done
