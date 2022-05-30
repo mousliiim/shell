@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# While Loop 10 Times
+# While Loop with case and condition
 nbrhour=1
 nbr=1
 echo "Hour: 0"
-while ((nbrhour < 13))
+while ((nbrhour <= 12))
 do
         echo $nbr
         ((nbr++))
@@ -14,4 +14,9 @@ case $nbr in
  ((nbrhour++))
  ;;
 esac
+done
+while ((nbr < 60))
+do
+	echo $nbr
+	((nbr++))
 done
