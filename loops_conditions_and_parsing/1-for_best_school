@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 #Every one loop ( 10 Times ) My Script print " Best School "
-for i in {1..10}; do echo "Best School"; done
+for i in {1..10}
+do
+   i="Best School"
+   echo "$i"
+done
