@@ -4,8 +4,8 @@ file=/etc/passwd
 
 # set the Internal Field Separator to |
 IFS=':'
-while read -r USERNAME PASSWORD GROUPID ONE TWO HOMEDIRECTORY COMMAND
+while read -r USERNAME PASSWORD USERID GROUPID USERIDINFO HOMEDIRECTORY COMMANDSHELL
 do
-        printf "The user $USERNAME is part of the $GROUPID gang, lives in $HOMEDIRECTORY and rides $COMMAND. $GROUPID's place is protected by the passcode $PASSWORD, more info about the user here: $USERNAME\n"
+        echo "The user $USERNAME is part of the $GROUPID gang, lives in $HOMEDIRECTORY and rides $COMMANDSHELL. $USERID's place is protected by the passcode $PASSWORD, more info about the user here: $USERIDINFO"
 	
 done < "$file"
