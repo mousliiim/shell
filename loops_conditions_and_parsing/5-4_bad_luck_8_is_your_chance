@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 # While Loop 10 Times
 
-i=0
-while [ $i -le 7 ]
+nbr=0
+while ((nbr < 8))
 do
-    echo "Best School"
-  ((i++))
-  if [[ $i == 3 ]];then
+        echo "Best School"
+        ((nbr++))
+if [[ $nbr == 3 ]]; then
     echo "bad luck"
-  elif [[ $i == 6 ]];then
+elif [[ $nbr == 6 ]];then
     echo "good luck"
+else
+continue
   fi
 done
