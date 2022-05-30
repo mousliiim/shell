@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Until Loop 10 Times ( Every one time loop my script print a string with "Best School" )
+string="Best School"
+nbr=0
+until ((nbr==10))
+do
+        echo "$string"
+        ((nbr+=1))
+done
+exit
