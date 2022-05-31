@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # The -F':' set ':' for the input field separator and value of $IFS always ignored 
-cat < apache-access.log | awk -F'[: - "]' '{print $1 " " $14}'
+cat < apache-access.log | awk -F'[: - ]' '{print $1 " " $12}'
