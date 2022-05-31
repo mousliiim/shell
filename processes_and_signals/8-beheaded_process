@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Kill processus
+killed=$(pgrep -f 7-highlander)
+kill -s SIGKILL "$killed"
