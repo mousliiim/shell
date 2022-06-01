@@ -2,6 +2,6 @@
 # While Loop
 while(true)
 do
-   sudo bash -c "echo 'I am alive!' >> /tmp/my_process"
+   sudo "echo 'I am alive!' >> /tmp/my_process"
     sleep 2
 done
