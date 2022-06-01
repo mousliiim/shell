@@ -2,13 +2,12 @@
 #
 startprog()
 {
-    ./manage_my_process &
-    echo "$!" > /var/run/my_process.pid
+    ./manage_my_process & echo "$!" > /var/run/my_process.pid
 }
 stopprog()
 {
-    sudo kill -15 "$(cat /var/run/my_process.pid)"
-    rm -f /var/run/my_process.pid
+    pkill -f ./manage_my_process
+    sudo rm -f /var/run/my_process.pid
 }
 case "$1" in
     start) startprog
