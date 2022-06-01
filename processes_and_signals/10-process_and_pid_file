@@ -8,8 +8,9 @@ rmfile()
 }
 
 echo $$ > /var/run/myscript.pid
-trap "echo 'I hate the kill command; rmfile" SIGTERM
+
 trap "echo 'Y U no love me?!'" SIGINT
+trap "echo 'I hate the kill command'; rmfile" SIGTERM
 trap "echo 'I hate the kill command'; rmfile" SIGQUIT
 
 while(true)
