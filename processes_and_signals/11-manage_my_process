@@ -11,16 +11,16 @@ stopprog()
 }
 case "$1" in
     start) startprog
-	   echo "manage_my_process started"
+	   printf "manage_my_process started\n"
 	   ;;
     stop) stopprog
-	  echo "manage_my_process stopped"
+	  printf "manage_my_process stopped\n"
 	  ;;
     restart) stopprog
 	     startprog
-             echo "manage_my_process restarted"
+             printf "manage_my_process restarted\n"
 	     ;;
-    *) echo "Usage: manage_my_process {start|stop|restart}"
+    *) printf "Usage: manage_my_process {start|stop|restart}\n"
        ;;
 esac
 exit 0
