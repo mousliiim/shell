@@ -3,11 +3,11 @@
 
 rmfile()
 {
-	rm -f /var/run/myscript.pid;
+	sudo rm -f /var/run/myscript.pid;
 	exit
 }
 
-echo $$ > /var/run/myscript.pid
+sudo bash -c "echo $$ > /var/run/myscript.pid"
 
 trap "echo 'Y U no love me?!'" SIGINT
 trap "echo 'I hate the kill command'; rmfile" SIGTERM
