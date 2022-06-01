@@ -1,23 +1,27 @@
 #!/usr/bin/env bash
-# Manage Process $1 = First Argument
-file=/var/run/my_process.pid
-	if [ "$1" == "start" ];
-	then
+#
+startprog()
+{
     ./manage_my_process &
-    sudo bash -c "echo $! > $file"
-    echo "manage_my_process started"
-	elif [ "$1" == "stop" ];
-	then
-    pkill -f ./manage_my_process
-    sudo rm -f $file
-    echo "manage_my_process stopped"
-	elif [ "$1" == "restart" ];
-	then
-    pkill -f ./manage_my_process
-    sudo rm -f $file
-    ./manage_my_process &
-    bash -c "echo $! > $file"
-    echo "manage_my_process restarted"
-else
-    echo "Usage: manage_my_process {start|stop|restart}"
-fi
+    echo "$!" > /var/run/my_process.pid
+}
+stopprog()
+{
+    sudo kill -15 "$(cat /var/run/my_process.pid)"
+    rm -f /var/run/my_process.pid
+}
+case "$1" in
+    start) startprog
+	   echo "manage_my_process started"
+	   ;;
+    stop) stopprog
+	  echo "manage_my_process stopped"
+	  ;;
+    restart) stopme
+	     startme
+             echo "manage_my_process restarted"
+	     ;;
+    *) echo "Usage: manage_my_process {start|stop|restart}"
+       ;;
+esac
+exit 0
