@@ -4,17 +4,17 @@ file=/var/run/my_process.pid
 	if [ "$1" == "start" ];
 	then
     ./manage_my_process &
-    bash -c "echo $! > $file"
+    sudo bash -c "echo $! > $file"
     echo "manage_my_process started"
 	elif [ "$1" == "stop" ];
 	then
     pkill -f ./manage_my_process
-    rm -f $file
+    sudo rm -f $file
     echo "manage_my_process stopped"
 	elif [ "$1" == "restart" ];
 	then
     pkill -f ./manage_my_process
-    rm -f $file
+    sudo rm -f $file
     ./manage_my_process &
     bash -c "echo $! > $file"
     echo "manage_my_process restarted"
