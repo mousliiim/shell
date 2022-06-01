@@ -16,8 +16,8 @@ case "$1" in
     stop) stopprog
 	  echo "manage_my_process stopped"
 	  ;;
-    restart) stopme
-	     startme
+    restart) stopprog
+	     startprog
              echo "manage_my_process restarted"
 	     ;;
     *) echo "Usage: manage_my_process {start|stop|restart}"
